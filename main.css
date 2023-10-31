@@ -20,6 +20,7 @@ header{
     width: 100%;
     font-size: 200px;
     
+    
 
 }
 
@@ -33,3 +34,17 @@ header{
     font-size: larger;
 }
 
+.completed{
+
+    margin-top: 80px;
+    text-decoration: line-through;
+    color: red;
+    font-size: 28px;
+}
+
+li{
+    margin-top: 80px;
+    
+    color: red;
+    font-size: 28px;
+}

@@ -1,19 +1,21 @@
 $(document).ready(function(){
-    
-
-
-    $('button').click(function(){
-        
-    })
 
     $('form').on('submit',function(e){
-        e.preventDefault(e);
+
+        e.preventDefault();
+
     const TarefaNova = $('#input-place').val();
-    const NovoItem = $('<li style="text-decoration: line-through"></li>');
-        $(`<ul>${TarefaNova}</ul>`).appendTo(NovoItem);
-        $(NovoItem).appendTo('ul')
-        $('input').val('');
-    
-    })
+
+        $('#commit').prepend("<li>" + TarefaNova + "</li>")
+
+        $('li').click(function() {
+            // Adicionando a classe "completed" ao elemento <li>
+            $(this).addClass('completed');
+            $('input').val('');
+        });
+
+
+    });
+
 
 })
